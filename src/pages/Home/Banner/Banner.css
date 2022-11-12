@@ -1,0 +1,12 @@
+.home-banner{
+    background-image: url('../../../assets/images/bg.png');
+    background-repeat: no-repeat;
+    width: 1363px;
+    height: 836px;
+}
+@media screen and (max-width: 1100px) {
+    .home-banner{
+        background-image: none;
+        width: 380px;
+    }
+  }
