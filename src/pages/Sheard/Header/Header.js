@@ -5,7 +5,7 @@ const Header = () => {
     const [handleResponsiveNav,setHandleResponsiveNav] = useState(false)
     const menuItems = <>
     <li><Link className='px-0 lg:px-2' to='/' >Home</Link></li>
-    <li><Link className='px-0 lg:px-2' to='/' >Appointment</Link></li>
+    <li><Link className='px-0 lg:px-2' to='/appointment' >Appointment</Link></li>
     <li><Link className='px-0 lg:px-2' to='/' >Reviews</Link></li>
     <li><Link className='px-0 lg:px-2' to='/' >Contact Us</Link></li>
     </>
