@@ -33,7 +33,7 @@ const BookingModal = ({treatment,selected,setTreatment}) => {
                     <select name="slot" className="select select-bordered w-full">
                         {
                             slots.map((slot, i) =><option key={i} value={slot}>{slot}</option>)
-                        }
+                        }p
                     </select>
                         <input type="text" placeholder="Name" name='pname' className="input input-bordered w-full"  required/>
                         <input type="number" placeholder="Number" name='number' className="input input-bordered w-full"  required/>

@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import headericon from '../../../assets/Headericon.png'
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 const Header = () => {
+    const {user,LogOutUser} = useContext(AuthContext)
     const [handleResponsiveNav,setHandleResponsiveNav] = useState(false)
     const menuItems = <>
     <li><Link className='px-0 lg:px-2' to='/' >Home</Link></li>
@@ -42,7 +44,12 @@ const Header = () => {
                         {menuItems}
                     </ul>
                     <div className='ml-36'>
+                    {
+                        user && user?.uid ?
+                        <Link onClick={LogOutUser}>LogOut</Link>
+                        :
                         <Link to='/login'>Login</Link>
+                    }
                     </div>
                 </div>
              </div>
